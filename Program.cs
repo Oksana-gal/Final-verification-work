@@ -9,21 +9,21 @@
 //[“Russia”, “Denmark”, “Kazan”] → []
 
 Console.Clear();
-string[] array1 = new string[4] {"Hello", "2", "world", ":-)"};
-string[] array2 = new string[array1.Length];
+string[] inputArray = new string[4] {"Hello", "2", "world", ":-)"};
+string[] outputArray = new string[inputArray.Length];
 
-SecondArrayWithIF(array1, array2);
-PrintArray(array2);
+SecondArrayWithIF(inputArray, outputArray);
+PrintArray(outputArray);
 
-void SecondArrayWithIF(string[] array1, string[] array2)
+void SecondArrayWithIF(string[] inputArray, string[] outputArray)
 {
-    int count = 0;
-    for (int i = 0; i < array1.Length; i++)
+    int outputIndex = 0;
+    for (int inputIndex = 0; inputIndex < inputArray.Length; inputIndex++)
     {
-    if(array1[i].Length <= 3)
+        if(inputArray[inputIndex].Length <= 3)
         {
-        array2[count] = array1[i];
-        count++;
+            outputArray[outputIndex] = inputArray[inputIndex];
+            outputIndex++;
         }
     }
 }
